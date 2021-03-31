@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <form method="post" action="script.php">
+            <div class="item">
+                <input onclick="isChecked()" class="checkbox" id="item-1" type="radio" name="radio" data-number='#1' value="13">
+                <label class="item-name" for="item-1">license plan #1</label>
+                <p class="item-price">$13 per license</p>
+            </div>
+            <div class="item">
+                <input onclick="isChecked()" class="checkbox" id="item-2" type="radio" name="radio" data-number='#2' value="22">
+                <label class="item-name" for="item-2">license plan #2</label>
+                <p class="item-price">$22 per license</p>
+            </div>
+            <div class="item">
+                <input onclick="isChecked()" class="checkbox" id="item-3" type="radio" name="radio" data-number='#3' value="34">
+                <label class="item-name" for="item-3">license plan #3</label>
+                <p class="item-price">$34 per license</p>
+            </div>
+            <div class="count">
+                <p class="count-name">
+                    Number of licenses:
+                </p>
+                <div class="count-selected">
+                    <select onclick="optionsChecked()" size="1" name="values[]">
+                        <option onclick="optionsChecked()" value="1">1</option>
+                        <option onclick="optionsChecked()" value="2">2</option>
+                        <option onclick="optionsChecked()" value="3">3</option>
+                        <option onclick="optionsChecked()" value="4">4</option>
+                        <option onclick="optionsChecked()" value="5">5</option>
+                        <option onclick="optionsChecked()" value="6">6</option>
+                        <option onclick="optionsChecked()" value="7">7</option>
+                        <option onclick="optionsChecked()" value="8">8</option>
+                        <option onclick="optionsChecked()" value="9">9</option>
+                        <option onclick="optionsChecked()" value="10">10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="count-total">
+                <div class="count-total-mgs">
+                    <p>total: </p>
+                </div>
+                <div class="count-total-sum">
+                    <p id="sum">$0<span>us</span></p>
+                </div>
+            </div>
+            <div class="count-btn">
+                <button type="submit">BYU NOW</button>
+            </div>
+            <div class="count-footer">
+                <p id="SelectedPlan">Selected plan: </p>
+            </div>
+        </form>
+    </div>
+    <script>
+        let checkboxValue
+        let optionValue
+        let selectedPlan
+        let inputText
+        let sum
+        function isChecked() {
+            let input = document.querySelector('input[name="radio"]:checked')
+            checkboxValue = input.getAttribute('value')
+            inputText = input.getAttribute('data-number')
+            renderSum(checkboxValue, optionValue)
+            RenderPlan(inputText)
+        }   
+        function optionsChecked () {
+            optionValue = document.querySelector('option:checked').getAttribute('value') 
+            renderSum(checkboxValue, optionValue)          
+        }
+        function renderSum (checkboxValue, optionValue = 1) {
+            sum = document.querySelector('#sum')
+            if (checkboxValue) {
+                sum.innerHTML = '$' +checkboxValue * optionValue + '<span>us</span>'
+            }            
+        }        
+        function RenderPlan(inputText) {
+            selectedPlan = document.querySelector('#SelectedPlan')
+            selectedPlan.innerHTML = 'Selected plan: ' + inputText
+        }        
+    </script>
+</body>
+
+</html>

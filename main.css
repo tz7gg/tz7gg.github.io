@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Regular.ttf');
+}
+
+body {
+    font-family: 'Calibri';
+    font-size: 16px;
+    color: #888888;
+}
+
+.wrapper {
+    width: 370px;
+    margin: 0 auto;
+    border: 10px solid #EBEBEB;
+    padding: 20px;
+    padding-top: 15px;
+    background-color: #F8F8F8;
+}
+
+.item {
+    margin-top: 5px;
+    height: 45px;
+    display: flex;   
+    align-items: center;
+}
+
+.item:hover {
+    background-color: #EBF4F7;
+    box-shadow: 0 0 2px 2px rgba(216,231,237); 
+}
+
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox+label {
+    padding-left: 17px;
+    display: inline-flex;
+    user-select: none;
+}
+.checkbox+label::before { 
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 4px solid #DEDEDE;
+    border-radius: 50%;
+    margin-right: 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    cursor: pointer;
+    
+}
+.checkbox:checked+label::before {
+    background-image: url("dot.png");   
+    border: 4px solid #36668F;
+}
+
+.item-name {
+    width: 77%;
+    font-family: 'Bebas Neue';
+    margin: 0px;
+    font-size: 1.3em;
+}
+
+.item-price {
+    font-size: 0.9em;
+    padding-right: 8px;
+    width: 33%;
+    margin: 0px;
+    text-align: right;    
+}
+.count  {
+    margin-top: 7px;
+    display: flex;
+    border-top: 2px solid #E7E7E7;
+    border-bottom: 2px solid #E7E7E7;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.count-name {
+    padding-right: 9px;
+}
+
+.count-selected select {
+    padding: 7px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    color: black;
+    border: 2px solid #BED3F5;
+}
+
+select:focus{
+    outline: none;
+}
+
+.count-total {
+    display: flex;
+    font-family: 'Bebas Neue';
+    font-size: 1.5em;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.count-total p {
+    padding-top: 20px;
+    margin: 0px;
+}
+
+.count-total-mgs {
+    padding-right: 7px;
+}
+
+.count-total-sum p {
+    color: #4994B1;
+}
+
+.count-total-sum span {
+    position: relative;
+    font-size: 0.6em;
+    bottom: 0.45em;
+}
+
+.count-btn {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.count-btn button {
+    font-family: 'Calibri';
+    font-size: 0.8em;
+    color: white;
+    padding: 45px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border: 1px solid #33A845;
+    background-color: #33A845;
+    border-radius: 25px;
+    
+}
+.count-btn button:focus {    
+    border: 1px solid #33A845;
+    outline: none;
+}
+.count-btn button:hover {
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    background-color: #198329;
+}
+
+.count-footer {    
+    font-size: 1.1em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #74ADC2;
+}
+.count-footer p {
+    margin: 0px;
+}
