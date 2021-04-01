@@ -5,91 +5,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Exemple</title>
 </head>
 
 <body>
-    <div class='wrapper'>
-        <form method="post" action="script.php">
-            <div class="item">
-                <input onclick="isChecked()" class="checkbox" id="item-1" type="radio" name="radio" data-number='#1' value="13">
-                <label class="item-name" for="item-1">license plan #1</label>
-                <p class="item-price">$13 per license</p>
+    <header id="main" class="header wrapper">
+        <div class="header-nav">
+            <div class="header-nav-logo">
+                <img src="img/logo.png" alt="">
             </div>
-            <div class="item">
-                <input onclick="isChecked()" class="checkbox" id="item-2" type="radio" name="radio" data-number='#2' value="22">
-                <label class="item-name" for="item-2">license plan #2</label>
-                <p class="item-price">$22 per license</p>
+            <nav class="header-nav-navigation">
+                <ul class="header-nav-navigation-ul">
+                    <li class="header-nav-navigation-ul-item"><a href="#main">главная</a></li>
+                    <li class="header-nav-navigation-ul-item"><a href="#about">об авторе</a></li>
+                    <li class="header-nav-navigation-ul-item"><a href="#work">работы</a></li>
+                    <li class="header-nav-navigation-ul-item"><a href="#contacts">контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-nav-burger"><img src="img/burger.png" alt=""></div>
+        </div>
+        <div class="header-wrapper wrapper">
+            <div class="header-wrapper-img">
+                <img src="img/headerimg.png" alt="">
             </div>
-            <div class="item">
-                <input onclick="isChecked()" class="checkbox" id="item-3" type="radio" name="radio" data-number='#3' value="34">
-                <label class="item-name" for="item-3">license plan #3</label>
-                <p class="item-price">$34 per license</p>
+            <div class="header-wrapper-content">
+                <h1 class="header-wrapper-content-title">Дизайн и верстка</h1>
+                <div class="header-wrapper-content-content">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+                <button name="button" class=" header-wrapper-content-btn ">НАПИСАТЬ МНЕ</button>
             </div>
-            <div class="count">
-                <p class="count-name">
-                    Number of licenses:
-                </p>
-                <div class="count-selected">
-                    <select onclick="optionsChecked()" size="1" name="values[]">
-                        <option onclick="optionsChecked()" value="1">1</option>
-                        <option onclick="optionsChecked()" value="2">2</option>
-                        <option onclick="optionsChecked()" value="3">3</option>
-                        <option onclick="optionsChecked()" value="4">4</option>
-                        <option onclick="optionsChecked()" value="5">5</option>
-                        <option onclick="optionsChecked()" value="6">6</option>
-                        <option onclick="optionsChecked()" value="7">7</option>
-                        <option onclick="optionsChecked()" value="8">8</option>
-                        <option onclick="optionsChecked()" value="9">9</option>
-                        <option onclick="optionsChecked()" value="10">10</option>
-                    </select>
+        </div>
+    </header>
+
+    <main>
+        <div id="about" class="about-wrapper wrapper">
+            <div class="about-wrapper-title">Обо мне</div>
+            <div class="about-wrapper-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+        </div>
+
+        <!-- <div class="completed-work wrapper">
+            <ul class="completed-work-ul">
+                <li class="completed-work-ul-item">
+                    <img src="img/project.png" alt="" class="completed-work-ul-item-img">
+                    <div class="completed-work-ul-item-number">40+</div>
+                    <div class="completed-work-ul-item-text">проектов</div>
+                </li>
+                <li class="completed-work-ul-item">
+                    <img src="img/project.png" alt="" class="completed-work-ul-item-img">
+                    <div class="completed-work-ul-item-number">40+</div>
+                    <div class="completed-work-ul-item-text">проектов</div>
+                </li>
+                <li class="completed-work-ul-item">
+                    <img src="img/project.png" alt="" class="completed-work-ul-item-img">
+                    <div class="completed-work-ul-item-number">40+</div>
+                    <div class="completed-work-ul-item-text">проектов</div>
+                </li>
+                <li class="completed-work-ul-item">
+                    <img src="img/project.png" alt="" class="completed-work-ul-item-img">
+                    <div class="completed-work-ul-item-number">40+</div>
+                    <div class="completed-work-ul-item-text">проектов</div>
+                </li>
+                <li class="completed-work-ul-item">
+                    <img src="img/project.png" alt="" class="completed-work-ul-item-img">
+                    <div class="completed-work-ul-item-number">40+</div>
+                    <div class="completed-work-ul-item-text">проектов</div>
+                </li>
+            </ul>
+        </div> -->
+
+        <div class="skills wrapper">
+            <div class="skills-content">
+                <div class="skills-content-title">Мои навыки</div>
+                <div class="skills-content-item">HTML 5
+                    <div class="skills-content-item-bar1"></div>
+                </div>
+                <div class="skills-content-item">CSS 3
+                    <div class="skills-content-item-bar2"></div>
+                </div>
+                <div class="skills-content-item">JavaScript
+                    <div class="skills-content-item-bar3"></div>
+                </div>
+                <div class="skills-content-item">Adobe Photoshop
+                    <div class="skills-content-item-bar4"></div>
+                </div>
+                <div class="skills-content-item">CorelDraw
+                    <div class="skills-content-item-bar5"></div>
+                </div>
+                <div class="skills-content-item">Figma
+                    <div class="skills-content-item-bar6"></div>
                 </div>
             </div>
-            <div class="count-total">
-                <div class="count-total-mgs">
-                    <p>total: </p>
-                </div>
-                <div class="count-total-sum">
-                    <p id="sum">$0<span>us</span></p>
-                </div>
+            <div class="skills-photo"></div>
+        </div>
+
+        <div id="work" class="process wrapper">
+            <div class="process-title">Как я работаю</div>
+            <div class="process-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+        </div>
+
+        <div class="slider">
+            <div class="slider-item">
+                <a href=""><img src="img/slide1.png" alt=""></a>
+                <img class="slider-item-glaz" src="img/glaz.png" alt="">
             </div>
-            <div class="count-btn">
-                <button type="submit">BYU NOW</button>
+            <div class="slider-item">
+                <a href=""><img src="img/slide2.png" alt=""></a>
+                <img class="slider-item-glaz" src="img/glaz.png" alt="">
             </div>
-            <div class="count-footer">
-                <p id="SelectedPlan">Selected plan: </p>
+            <div class="slider-item">
+                <a href=""><img src="img/slide1.png" alt=""></a>
+                <img class="slider-item-glaz" src="img/glaz.png" alt="">
             </div>
-        </form>
-    </div>
-    <script>
-        let checkboxValue
-        let optionValue
-        let selectedPlan
-        let inputText
-        let sum
-        function isChecked() {
-            let input = document.querySelector('input[name="radio"]:checked')
-            checkboxValue = input.getAttribute('value')
-            inputText = input.getAttribute('data-number')
-            renderSum(checkboxValue, optionValue)
-            RenderPlan(inputText)
-        }   
-        function optionsChecked () {
-            optionValue = document.querySelector('option:checked').getAttribute('value') 
-            renderSum(checkboxValue, optionValue)          
-        }
-        function renderSum (checkboxValue, optionValue = 1) {
-            sum = document.querySelector('#sum')
-            if (checkboxValue) {
-                sum.innerHTML = '$' +checkboxValue * optionValue + '<span>us</span>'
-            }            
-        }        
-        function RenderPlan(inputText) {
-            selectedPlan = document.querySelector('#SelectedPlan')
-            selectedPlan.innerHTML = 'Selected plan: ' + inputText
-        }        
-    </script>
+            <div class="slider-item">
+                <a href=""><img src="img/slide2.png" alt=""></a>
+                <img class="slider-item-glaz" src="img/glaz.png" alt="">
+            </div>
+        </div>
+
+        <div id="contacts" class="contacts-wrapper wrapper">
+            <div class="contacts-wrapper-title">Хотите веб-сайт?</div>
+            <div class="contacts-wrapper-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+
+            <div class="contacts-wrapper-form">
+                <form action="" method="post">
+                    <input id="POST-name" type="text" name="name" placeholder="Ваше имя">
+                    <input id="POST-email" type="text" name="email" placeholder="Ваш e-mail">
+                    <textarea id="POST-text" name="text" placeholder="Ваше сообщение" rows="7"></textarea>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
